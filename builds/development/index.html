@@ -2,30 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>day #</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>day4</title>
+  <link rel="stylesheet" href="css/myStyle.css">
+  <link rel="stylesheet" href="css/anotherstyle.css">
 </head>
 <body>
-  <div id="canvas" style="width:140px;padding:0px;margin:0px;"></div>
-
-  <br>
-  <button onclick="changeColor()">rotate and translate</button>
-  <button onclick="resetTransform()">reset transform</button>
-  <button onclick="animateShape()">animate</button>
-  <button onclick="animateColor()">animate color</button>
+  <div id="canvas" class="center"></div>
+  <p class="center">Click any of these squares would cause fading away...</p>
   <script src="js/lib/raphael-min.js"></script>
   <script>
-    var paper=Raphael("canvas",1650,500);
+    var paper=Raphael("canvas",500,500);
+    var rect = paper.rect(200,200,100,100).attr({
+      "fill":"#17A9C6", //filling with background color
+      "stroke":"#ffffff", // border color of the rectangle
+      "stroke-width":2, // the width of the border
+      "cursor":"pointer"
+    });
 
-    function animateShape(){
-      img.animate({"transform":"r90t100,0,s1.5"},4000,"elastic");
-    }
+    var rect00=paper.rect(0,0,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect01=paper.rect(0,100,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect02=paper.rect(0,200,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect03=paper.rect(0,300,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect04=paper.rect(0,400,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+
+    var rect10=paper.rect(100,0,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect11=paper.rect(100,100,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect12=paper.rect(100,200,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect13=paper.rect(100,300,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect14=paper.rect(100,400,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+
+    var rect20=paper.rect(200,0,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect21=paper.rect(200,100,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect23=paper.rect(200,300,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect24=paper.rect(200,400,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+
+    var rect30=paper.rect(300,0,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect31=paper.rect(300,100,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect32=paper.rect(300,200,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect33=paper.rect(300,300,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect34=paper.rect(300,400,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+
+    var rect40=paper.rect(400,0,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect41=paper.rect(400,100,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect42=paper.rect(400,200,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect43=paper.rect(400,300,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+    var rect44=paper.rect(400,400,100,100).attr({"fill":"#17A9C6", "stroke":"#ffffff", "stroke-width":2, "cursor":"pointer"});
+
     function animateColor(){
-      img.animate({"fill":"#ddd","fill-opacity":0.7},800,"bounce");
+      rect21.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+        rect11.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+          rect12.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+            rect13.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+              rect23.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                rect33.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                  rect32.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                    rect31.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                      rect30.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                        rect20.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                          rect10.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                            rect00.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                              rect01.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                rect02.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                  rect03.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                    rect04.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                      rect14.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                        rect24.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                          rect34.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                            rect44.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                              rect43.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                                rect42.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                                  rect41.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                                    rect40.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn",function(){
+                                                      rect.animate({"fill":"#ddd","fill-opacity":0.7},300,"easeIn");
+                                                    });
+                                                  });
+                                                });
+                                              });
+                                            });
+                                          });
+                                        });
+                                      });
+                                    });
+                                  });
+                                });
+                              });
+                            });
+                          });
+                        });
+                      });
+                    });
+                  });
+                });
+              });
+            });
+          });
+        });
+      })
     }
-    function resetTransform(){
-      img.transform("");
-    }
+    rect.click(animateColor);
+    rect00.click(animateColor);
+    rect01.click(animateColor);
+    rect02.click(animateColor);
+    rect03.click(animateColor);
+    rect04.click(animateColor);
+    rect10.click(animateColor);
+    rect11.click(animateColor);
+    rect12.click(animateColor);
+    rect13.click(animateColor);
+    rect14.click(animateColor);
+    rect20.click(animateColor);
+    rect21.click(animateColor);
+    rect23.click(animateColor);
+    rect24.click(animateColor);
+    rect30.click(animateColor);
+    rect31.click(animateColor);
+    rect32.click(animateColor);
+    rect33.click(animateColor);
+    rect34.click(animateColor);
+    rect40.click(animateColor);
+    rect41.click(animateColor);
+    rect42.click(animateColor);
+    rect43.click(animateColor);
+    rect44.click(animateColor);
+
+
+//    function animateShape(){
+//      img.animate({"transform":"r90t100,0,s1.5"},4000,"elastic");
+//    }
+//    function animateColor(){
+//      img.animate({"fill":"#ddd","fill-opacity":0.7},800,"bounce");
+//    }
+//    function resetTransform(){
+//      img.transform("");
+//    }
 //    randomShape.click(function(){
 //      alert('you click me');
 //    });
